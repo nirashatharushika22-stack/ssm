@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Search doctors by name, speciality or medical center and see their channeling timetable.">
+    <title>E-Channel | Find a Doctor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header>
+        <div class="container">
+            <nav aria-label="Main menu">
+                <a class="brand" href="index.html">
+                    <img src="images/logo.svg" alt="E-Channel logo">E-Channel
+                </a>
+                <button id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+                <ul id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="doctors.html" class="active" aria-current="page">Doctors</a></li>
+                    <li><a href="book.html">Book</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="page-title">
+            <h1>Find a Doctor</h1>
+        </div>
+
+        <section class="bg-faq">
+            <div class="container">
+                <div class="filters">
+                    <label for="q" class="sr-only">Search doctor or speciality</label>
+                    <input id="q" placeholder="Search name or speciality">
+                    <label for="cs" class="sr-only">Medical center</label>
+                    <select id="cs"></select>
+                </div>
+                <div class="grid" id="docList" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="alt">
+            <div class="container">
+                <h2>Weekly Timetable</h2>
+                <div class="table-wrap">
+                    <table>
+                        <caption>Doctor channeling timetable</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Doctor</th>
+                                <th scope="col">Speciality</th>
+                                <th scope="col">Center</th>
+                                <th scope="col">Days</th>
+                                <th scope="col">Time</th>
+                                <th scope="col">Fee (Rs.)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="timeBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> E-Channel | IS 1106 Group Project</p>
+            <p>Student project. Bookings are not real.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/doctors.js"></script>
+</body>
+</html>

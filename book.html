@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Book a doctor appointment online. Choose a doctor, enter your details and pick a date.">
+    <title>E-Channel | Book an Appointment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header>
+        <div class="container">
+            <nav aria-label="Main menu">
+                <a class="brand" href="index.html">
+                    <img src="images/logo.svg" alt="E-Channel logo">E-Channel
+                </a>
+                <button id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+                <ul id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="book.html" class="active" aria-current="page">Book</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="page-title">
+            <h1>Book Appointment</h1>
+        </div>
+
+        <section>
+            <div class="container">
+                <p class="notice">This is a student project. Please do not enter real personal details.</p>
+
+                <form class="box" id="bookForm" novalidate>
+                    <label for="doctor">Doctor</label>
+                    <select id="doctor"></select>
+
+                    <label for="pname">Your Name</label>
+                    <input id="pname" autocomplete="off" aria-describedby="e1">
+                    <div class="error" id="e1" role="alert"></div>
+
+                    <label for="phone">Phone</label>
+                    <input id="phone" type="tel" placeholder="0771234567" autocomplete="off" aria-describedby="e2">
+                    <div class="error" id="e2" role="alert"></div>
+
+                    <label for="date">Date</label>
+                    <input type="date" id="date" aria-describedby="dateHint e3">
+                    <div class="hint" id="dateHint"></div>
+                    <div class="error" id="e3" role="alert"></div>
+
+                    <button class="btn btn-block" type="submit">Confirm Booking</button>
+                </form>
+
+                <div id="confirm" role="status"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> E-Channel | IS 1106 Group Project</p>
+            <p>Student project. Bookings are not real.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/book.js"></script>
+</body>
+</html>

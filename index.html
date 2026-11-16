@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Find doctors in local medical centers and book your channeling appointment online.">
+    <title>E-Channel | Online Doctor Channeling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header>
+        <div class="container">
+            <nav aria-label="Main menu">
+                <a class="brand" href="index.html">
+                    <img src="images/logo.svg" alt="E-Channel logo">E-Channel
+                </a>
+                <button id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+                <ul id="menu">
+                    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="book.html">Book</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="container">
+                <div>
+                    <h1>Channel your doctor online, in minutes</h1>
+                    <p>Find doctors in medical centers near you and book without waiting in queues.</p>
+                    <form class="search" id="heroSearch" role="search">
+                        <label for="hq" class="sr-only">Search doctor</label>
+                        <input id="hq" placeholder="Doctor or speciality...">
+                        <button class="btn" type="submit">Search</button>
+                    </form>
+                </div>
+                <img class="hero-img" src="images/doc250.avif" alt="Illustration of a friendly doctor">
+            </div>
+        </section>
+
+        <section id="centers">
+            <div class="container">
+                <h2>Our Medical Centers</h2>
+                <div class="grid" id="centerList"></div>
+            </div>
+        </section>
+
+        <section class="bg-steps">
+            <div class="container">
+                <h2 class="on-dark">How It Works</h2>
+                <ol class="grid steps">
+                    <li class="card"><span class="step">1</span><h3>Find a Doctor</h3><p>Search by name or speciality.</p></li>
+                    <li class="card"><span class="step">2</span><h3>Pick a Date</h3><p>Choose a day the doctor is available.</p></li>
+                    <li class="card"><span class="step">3</span><h3>Get Confirmed</h3><p>Receive your reference number instantly.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Why Use E-Channel?</h2>
+                <ul class="ticks">
+                    <li>No waiting in long queues</li>
+                    <li>See doctor timetable and fees before booking</li>
+                    <li>Works on phone, tablet and computer</li>
+                    <li>Get a booking reference number instantly</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="bg-faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+                    <button class="faq-q" aria-expanded="false">Is this a real booking system?</button>
+                    <p class="faq-a" hidden>No. This is a student project (static website), so bookings are not saved. Do not enter real personal details.</p>
+
+                    <button class="faq-q" aria-expanded="false">Do I need to pay online?</button>
+                    <p class="faq-a" hidden>No. Payment is made at the medical center. The fee shown is only for information.</p>
+
+                    <button class="faq-q" aria-expanded="false">Can I use it on my phone?</button>
+                    <p class="faq-a" hidden>Yes. The website is responsive and adjusts to phone, tablet and computer screens.</p>
+
+                    <button class="faq-q" aria-expanded="false">How do I find a doctor?</button>
+                    <p class="faq-a" hidden>Use the search box on the home page or the Doctors page. You can search by name or speciality and filter by medical center.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> E-Channel | IS 1106 Group Project</p>
+            <p>Student project. Bookings are not real.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
